@@ -1,0 +1,126 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TESTS",
+		"_postman_id": "b1944137-af3b-bf8c-d173-3d4a32c84de9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "yahoo",
+			"request": {
+				"url": "http://www.yahoo.com",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"profile_url\": \"http://www.yahoo.com\",\n    \"username\": \"muscleguy51@yahoo.com\",\n    \"password\": \"jeaneendavis1109\"\n  }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "google get",
+			"request": {
+				"url": "http://www.google.com",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"profile_url\": \"http://www.google.com\",\n\t\t\"username\": \"a85\",\n\t\t\"password\": \"blah\"\n\t},\n\t{\n\t\t\"profile_url\": \"http://www.getpostman.com\",\n\t\t\"username\": \"larry\",\n\t\t\"password\": \"nocolors\"\n\t}\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "selenium test",
+			"request": {
+				"url": "http://api.myfakeapp.com/v1/create-user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  'username':   'example-username',\n  'password':   'abcd1234',\n  'email':      'bob@example.com',\n  'first_name': 'bob',\n  'last_name':  'example'\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Google URL Shortener",
+			"request": {
+				"url": "https://www.googleapis.com/urlshortener/v1/url",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"longUrl\": \"http://www.google.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "yahoo post",
+			"request": {
+				"url": "http://www.yahoo.com",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"profile_url\": \"http://www.yahoo.com\",\n    \"username\": \"muscleguy51@yahoo.com\",\n    \"password\": \"jeaneendavis1109\"\n  }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
