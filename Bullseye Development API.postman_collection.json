@@ -1,0 +1,1620 @@
+{
+	"info": {
+		"_postman_id": "96a75621-0834-776d-5e1b-d70ba706e7bc",
+		"name": "Bullseye Development API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "DoSearch2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/DoSearch2?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&CountryID=1&PostalCode=08876&Radius=5&PageSize=25",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"DoSearch2"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "CountryID",
+									"value": "1"
+								},
+								{
+									"key": "PostalCode",
+									"value": "08876"
+								},
+								{
+									"key": "Radius",
+									"value": "5"
+								},
+								{
+									"key": "PageSize",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/GetUser?APIKey=e1cdc610-55d8-4eb7-943b-54b123615ba9&ClientID=267&memberKey=joshua123@test.electricvine.com",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"GetUser"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "e1cdc610-55d8-4eb7-943b-54b123615ba9"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "memberKey",
+									"value": "joshua123@test.electricvine.com"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"newUserName\": \"newuser2@test.electricvine.com\",\r\n\t\t\"newPassword\": \"password\",\r\n\t\t\"newUserRole\" : \"dealeruser\",\r\n\t\t\"relatedId\" : \"3706083\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/CreateUser",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"CreateUser"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"newUserName\": \"newuserNEW@test.electricvine.com\",\r\n\t\t\"newPassword\": \"password\",\r\n\t\t\"newUserRole\" : \"dealeruser\",\r\n\t\t\"relatedId\" : \"3706083\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/CreateUser",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"CreateUser"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocationByIP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientSubsFeatures",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGeneralClientConfig",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetGeneralClientConfig?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&InterfaceConfigId=1827",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetGeneralClientConfig"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "InterfaceConfigId",
+									"value": "1827"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllClientSearchSettings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetAllClientSearchSettings?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetAllClientSearchSettings"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestAdmin.svc/ValidateClient?APIKey=70ABCF39-D794-48D8-BBCF-F413B1AEA64C&UserName=musicstaff@musicstaff.com&Password=password",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestAdmin.svc",
+								"ValidateClient"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "70ABCF39-D794-48D8-BBCF-F413B1AEA64C"
+								},
+								{
+									"key": "UserName",
+									"value": "musicstaff@musicstaff.com"
+								},
+								{
+									"key": "Password",
+									"value": "password"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Lead",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"a07c1ab5-3976-413b-8e48-aee7e8d3d967\",\r\n\t\t\"EmailLead\": \"false\",\r\n\t\t\"EmailDealers\" : \"false\",\r\n\t\t\"FirstName\": \"Joshua\",\r\n\t\t\"LastName\": \"Rich\",\r\n\t\t\"CompanyName\": \"EVI Test\",\r\n\t\t\"EmailAddress\": \"jrich@test.electricvine.com\",\r\n\t\t\"Address1\": \"3121 US HWY 22\",\r\n\t\t\"Address2\": \"Suite 301\",\r\n\t\t\"City\": \"Branchburg\",\r\n\t\t\"StateAbbr\": \"NJ\",\r\n\t\t\"PostalCode\": \"08876\",\r\n\t\t\"CountryID\": \"1\",\r\n\t\t\"PhoneNumber\": \"123-123-1234\",\r\n\t\t\"Comments\": \"This is a test\",\r\n\t\t\"PriorityID\":\"3\",\r\n\t\t\"LeadSourceID\":\"320\",\r\n\t\t\"LocationID\":\"8124139\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.bullseyelocations.com/RestLead.svc/AddLead",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestLead.svc",
+								"AddLead"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Staging",
+			"item": [
+				{
+					"name": "Add Lead",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"EmailLead\": \"false\",\r\n\t\t\"EmailDealers\" : \"false\",\r\n\t\t\"NewLead\":\t\r\n\t\t\t{\r\n\t\t\t\"CountryID\": 1,\r\n\t\t\t\"FirstName\": \"Joshua\",\r\n\t\t\t\"LastName\": \"Rich\",\r\n\t\t\t\"CompanyName\": \"EVI Test\",\r\n\t\t\t\"EmailAddress\": \"jrich@test.electricvine.com\",\r\n\t\t\t\"Address1\": \"3121 US HWY 22\",\r\n\t\t\t\"Address2\": \"Suite 301\",\r\n\t\t\t\"City\": \"Branchburg\",\r\n\t\t\t\"StateAbbr\": \"NJ\",\r\n\t\t\t\"PostalCode\": \"08876\",\r\n\t\t\t\"PhoneNumber\": \"123-123-1234\",\r\n\t\t\t\"Comments\": \"This is a test\",\r\n\t\t\t\"PriorityID\": 3,\r\n\t\t\t\"LeadSourceID\": 320\r\n\t\t\t}\t\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestLead.svc/AddLead",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestLead.svc",
+								"AddLead"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DoSearch2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/DoSearch2?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&CountryID=1&PostalCode=08876&Radius=5&PageSize=25",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"DoSearch2"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "CountryID",
+									"value": "1"
+								},
+								{
+									"key": "PostalCode",
+									"value": "08876"
+								},
+								{
+									"key": "Radius",
+									"value": "5"
+								},
+								{
+									"key": "PageSize",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/GetUser?APIKey=e1cdc610-55d8-4eb7-943b-54b123615ba9&ClientID=267&memberKey=joshua123@test.electricvine.com",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"GetUser"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "e1cdc610-55d8-4eb7-943b-54b123615ba9"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "memberKey",
+									"value": "joshua123@test.electricvine.com"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUserScott",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"newUserName\": \"newuser2@test.electricvine.com\",\r\n\t\t\"newPassword\": \"password\",\r\n\t\t\"newUserRole\" : \"dealeruser\",\r\n\t\t\"relatedId\" : \"3706083\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/CreateUser",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"CreateUser"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"newUserName\": \"newuser2@test.electricvine.com\",\r\n\t\t\"newPassword\": \"password\",\r\n\t\t\"newUserRole\" : \"dealeruser\",\r\n\t\t\"relatedId\" : \"3706083\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/CreateUser",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"CreateUser"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocationByIP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientSubsFeatures",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGeneralClientConfig",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetGeneralClientConfig?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&InterfaceConfigId=1827",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetGeneralClientConfig"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "InterfaceConfigId",
+									"value": "1827"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllClientSearchSettings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetAllClientSearchSettings?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetAllClientSearchSettings"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestAdmin.svc/ValidateClient?APIKey=70ABCF39-D794-48D8-BBCF-F413B1AEA64C&UserName=musicstaff@musicstaff.com&Password=password",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestAdmin.svc",
+								"ValidateClient"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "70ABCF39-D794-48D8-BBCF-F413B1AEA64C"
+								},
+								{
+									"key": "UserName",
+									"value": "musicstaff@musicstaff.com"
+								},
+								{
+									"key": "Password",
+									"value": "password"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Staging 2",
+			"item": [
+				{
+					"name": "DoSearch2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestSearch.svc/DoSearch2?APIKey=dd9da999-c6e7-4f06-93e6-39dcd5a5acae&ClientID=5870&CountryID=1&PostalCode=08876&Radius=5&PageSize=25&LanguageID&LanguageCode=FR",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"DoSearch2"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "dd9da999-c6e7-4f06-93e6-39dcd5a5acae"
+								},
+								{
+									"key": "ClientID",
+									"value": "5870"
+								},
+								{
+									"key": "CountryID",
+									"value": "1"
+								},
+								{
+									"key": "PostalCode",
+									"value": "08876"
+								},
+								{
+									"key": "Radius",
+									"value": "5"
+								},
+								{
+									"key": "PageSize",
+									"value": "25"
+								},
+								{
+									"key": "LanguageID",
+									"value": ""
+								},
+								{
+									"key": "LanguageCode",
+									"value": "FR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/GetUser?APIKey=e1cdc610-55d8-4eb7-943b-54b123615ba9&ClientID=267&memberKey=joshua123@test.electricvine.com",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"GetUser"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "e1cdc610-55d8-4eb7-943b-54b123615ba9"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "memberKey",
+									"value": "joshua123@test.electricvine.com"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"267\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"newUserName\": \"newuser2@test.electricvine.com\",\r\n\t\t\"newPassword\": \"password\",\r\n\t\t\"newUserRole\" : \"dealeruser\",\r\n\t\t\"relatedId\" : \"3706083\"\r\n}\t\t\r\n"
+						},
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestUser.svc/CreateUser",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestUser.svc",
+								"CreateUser"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocationByIP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientSubsFeatures",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetLocationByIP?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267&IPaddress=199.199.1.238",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocationByIP"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								},
+								{
+									"key": "IPaddress",
+									"value": "199.199.1.238"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGeneralClientConfig",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestSearch.svc/GetGeneralClientConfig?APIKey=388a9612-e6b3-42d9-a661-59535243479b&ClientID=5874&InterfaceConfigId=6157&LanguageID=48",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetGeneralClientConfig"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "388a9612-e6b3-42d9-a661-59535243479b"
+								},
+								{
+									"key": "ClientID",
+									"value": "5874"
+								},
+								{
+									"key": "InterfaceConfigId",
+									"value": "6157"
+								},
+								{
+									"key": "LanguageID",
+									"value": "48"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllClientSearchSettings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestSearch.svc/GetAllClientSearchSettings?APIKey=4630872d-1c75-4a33-ac4c-09e553d53242&ClientID=267",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetAllClientSearchSettings"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "4630872d-1c75-4a33-ac4c-09e553d53242"
+								},
+								{
+									"key": "ClientID",
+									"value": "267"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ws.staging.bullseyelocations.com/RestAdmin.svc/ValidateClient?APIKey=70ABCF39-D794-48D8-BBCF-F413B1AEA64C&UserName=musicstaff@musicstaff.com&Password=password",
+							"protocol": "http",
+							"host": [
+								"ws",
+								"staging",
+								"bullseyelocations",
+								"com"
+							],
+							"path": [
+								"RestAdmin.svc",
+								"ValidateClient"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "70ABCF39-D794-48D8-BBCF-F413B1AEA64C"
+								},
+								{
+									"key": "UserName",
+									"value": "musicstaff@musicstaff.com"
+								},
+								{
+									"key": "Password",
+									"value": "password"
+								}
+							]
+						},
+						"description": "Get User"
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientTerms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestSearch.svc/GetClientTerms?APIKey=dd9da999-c6e7-4f06-93e6-39dcd5a5acae&ClientID=5870&LanguageID=48",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetClientTerms"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "dd9da999-c6e7-4f06-93e6-39dcd5a5acae"
+								},
+								{
+									"key": "ClientID",
+									"value": "5870"
+								},
+								{
+									"key": "LanguageID",
+									"value": "48"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestEventSearch.svc/GetCategories?APIKey=dd9da999-c6e7-4f06-93e6-39dcd5a5acae&ClientID=5870&LanguageCode=FR&LanguageID=148",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestEventSearch.svc",
+								"GetCategories"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "dd9da999-c6e7-4f06-93e6-39dcd5a5acae"
+								},
+								{
+									"key": "ClientID",
+									"value": "5870"
+								},
+								{
+									"key": "LanguageCode",
+									"value": "FR"
+								},
+								{
+									"key": "LanguageID",
+									"value": "148"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestSearch.svc/GetLocation?APIKey=dd9da999-c6e7-4f06-93e6-39dcd5a5acae&ClientID=5870&LanguageID&LanguageCode=FR&LocationID=4952378&ThirdPartyID",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestSearch.svc",
+								"GetLocation"
+							],
+							"query": [
+								{
+									"key": "APIKey",
+									"value": "dd9da999-c6e7-4f06-93e6-39dcd5a5acae"
+								},
+								{
+									"key": "ClientID",
+									"value": "5870"
+								},
+								{
+									"key": "LanguageID",
+									"value": ""
+								},
+								{
+									"key": "LanguageCode",
+									"value": "FR"
+								},
+								{
+									"key": "LocationID",
+									"value": "4952378"
+								},
+								{
+									"key": "ThirdPartyID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddLead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var responseJSON;",
+									"try {",
+									"    tests[\"Body contains headers\"] = responseBody.has(\"headers\");",
+									"    responseJSON = JSON.parse(responseBody);",
+									"    tests[\"Header contains host\"] = \"host\" in responseJSON.headers;",
+									"    tests[\"Header contains test parameter sent as part of request header\"] = \"my-sample-header\" in responseJSON.headers;",
+									"}",
+									"catch (e) { }",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"ClientId\": \"4837\",\r\n\t\t\"ApiKey\": \"e1cdc610-55d8-4eb7-943b-54b123615ba9\",\r\n\t\t\"NewLead\": \"\",\r\n\t\t\"EmailLead\": \"True\",\r\n\t\t\"EmailDealers\" : \"True\",\r\n}\t"
+						},
+						"url": {
+							"raw": "http://leadmanagerws.staging2.electricvine.com/RestLead.svc/AddLead",
+							"protocol": "http",
+							"host": [
+								"leadmanagerws",
+								"staging2",
+								"electricvine",
+								"com"
+							],
+							"path": [
+								"RestLead.svc",
+								"AddLead"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

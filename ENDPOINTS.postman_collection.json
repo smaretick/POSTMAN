@@ -1,0 +1,1478 @@
+{
+	"info": {
+		"_postman_id": "6e09e9f5-3703-ea9d-bd46-f41bf083ea6f",
+		"name": "ENDPOINTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RnSurveyMeasureID212",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"FacilityId\": 5269,\r\n  \"CorrelationId\" : \"936DA01F-9ABD-4d9d-80C7-02AF85C822A8\",\r\n  \"Measures\": [\r\n    { \"MeasureID\": 212 }   \r\n  ],\r\n  \"PeerGroups\": [\r\n    { \"ComparisonGroupId\" : 1 }\r\n  ],\r\n\"UnitTypes\": [{\"UnitTypeId\": 1 }]\r\n}"
+				},
+				"url": {
+					"raw": "https://npsdatasources.pressganey.com/api/rnsurvey",
+					"protocol": "https",
+					"host": [
+						"npsdatasources",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"rnsurvey"
+					]
+				},
+				"description": "https://npsdatasources.pressganey.com/api/rnsurvey"
+			},
+			"response": []
+		},
+		{
+			"name": "RnSurveyPRODNoSurveys",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"FacilityId\": 5269,\r\n  \"CorrelationId\" : \"936DA01F-9ABD-4d9d-80C7-02AF85C822A8\",\r\n  \"Measures\": [\r\n    { \"MeasureID\": 100 },\r\n    { \"MeasureID\": 101 },\r\n    { \"MeasureID\": 102 }\r\n  ],\r\n  \"PeerGroups\": [\r\n    { \"ComparisonGroupId\" : 1 }\r\n  ],\r\n\"UnitTypes\": [{\"UnitTypeId\": 1 }]\r\n}"
+				},
+				"url": {
+					"raw": "https://npsdatasources.pressganey.com/api/rnsurvey",
+					"protocol": "https",
+					"host": [
+						"npsdatasources",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"rnsurvey"
+					]
+				},
+				"description": "https://npsdatasources.pressganey.com/api/rnsurvey"
+			},
+			"response": []
+		},
+		{
+			"name": "ClinicalPROD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"FacilityId\": \"8791\",\r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"Measures\": [\r\n  { \"MeasureID\": 182 }\r\n  ],\r\n  \"PeerGroups\": [\r\n    { \"PeerGroupID\": 1003}\r\n  ],\r\n  \"UnitTypes\" : [\r\n        { \"UnitTypeId\" : 5 }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "https://npsdatasources.pressganey.com/api/clinical",
+					"protocol": "https",
+					"host": [
+						"npsdatasources",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"clinical"
+					]
+				},
+				"description": "https://npsdatasources.pressganey.com/api/clinical"
+			},
+			"response": []
+		},
+		{
+			"name": "PxDataUnitPerf6Q",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{ \r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"ClientId\": 466,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n  \"ClientServiceSiteIds\" : [ 59514 ],\r\n   \"Sites\": [\r\n    { \"CssId\": 59514, \"UnitIds\": [1, 2, 3] }\r\n  ],\r\n  \"QuarterEndDate\": \"2016-03-31T00:00:00-05:00\",\r\n  \"QuarterLookBack\": 6,\r\n  \"ScoreType\": \"Mean\",\r\n  \"VariableName\": \"A1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/unitperformance ",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"unitperformance "
+					]
+				},
+				"description": "http://pe-orc-app1q:8881/api/unitperformance\n\n"
+			},
+			"response": []
+		},
+		{
+			"name": "PxDataServiceUATscores",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores \n"
+			},
+			"response": []
+		},
+		{
+			"name": "PxDataServiceUATscoresJULIA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores \n"
+			},
+			"response": []
+		},
+		{
+			"name": "NpsUnitPerformanceMeanMeasure",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ClientId\": 5269,\r\n  \"ComparisonGroupId\": 1,\r\n  \"Metric\": \"Mean\",\r\n  \"CorrelationId\" : \"936DA01F-9ABD-4d9d-80C7-02AF85C822A8\",\r\n  \"Categories\": [\r\n          { \"CategoryId\": 100, \"MeasureIds\": [101, 102] },\r\n          { \"CategoryId\": 211, \"MeasureIds\": [212] }],\r\n   \"Units\": [1001, 1002],\r\n   \"UnitTypeId\":1\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8891/api/NpsUnitPerformance",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8891",
+					"path": [
+						"api",
+						"NpsUnitPerformance"
+					]
+				},
+				"description": "http://pe-orc-app1q:8891/api/NpsUnitPerformance"
+			},
+			"response": []
+		},
+		{
+			"name": "NsciUnitPerformanceQA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ClientId\": 8791,\r\n  \"ComparisonGroupId\": 1,\r\n  \"Metric\": \"Mean\",\r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"MeasureId\": 182,\r\n  \"Units\": [21077],\r\n  \"UnitTypeId\" : 3 \r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8891/api/NsciUnitPerformance",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8891",
+					"path": [
+						"api",
+						"NsciUnitPerformance"
+					]
+				},
+				"description": "http://pe-orc-app1q:8891/api/NsciUnitPerformance"
+			},
+			"response": []
+		},
+		{
+			"name": "NsciUnitPerformanceFitnesse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"ClientId\": 8791,\r\n\t\"ComparisonGroupId\": 1,\r\n\t\"Metric\": \"Mean\",\r\n\t\"CorrelationId\": \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n\t\"MeasureID\": 38,\r\n\t\"UnitTypeId\": 4,\r\n\t\"Units\": [13085, 21078, 66130]  \r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8891/api/NsciUnitPerformance",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8891",
+					"path": [
+						"api",
+						"NsciUnitPerformance"
+					]
+				},
+				"description": "http://pe-orc-app1q:8891/api/NsciUnitPerformance\n\nhttp://localhost:8001/Nps.NsciUnitPerformance.AllQuartersEmptyForPeergroupsAndUnits"
+			},
+			"response": []
+		},
+		{
+			"name": "PxRadialsGood",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ClientId\": 50000,\r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"SurveyItems\":[{\r\n      \"VariableNames\":[\"A1\"],\r\n      \"ServiceId\": 12,\r\n      \"PeerGroupId\": 1010,\r\n      \"ScoreType\": \"Mean\",\r\n      \"ClientServiceSiteIds\":[1],\r\n      \"BreakoutType\": \"Unit\"\r\n  },\r\n    {\r\n      \"VariableNames\":[\"A1\"],\r\n      \"ServiceId\": 15,\r\n      \"PeerGroupId\": 2020,\r\n      \"ScoreType\": \"Mean\",\r\n      \"ClientServiceSiteIds\":[5],\r\n      \"BreakoutType\": \"Site\"\r\n    }\r\n  ],\r\n  \"QuarterEndDate\": \"2016-06-30T00:00:00-05:00\"\r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/radial",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"radial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PxRadialsGood2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ClientId\": 50000,\r\n  \"SurveyItems\": [ {\"PeerGroupId\": 1728, \"ClientServiceSiteIds\": [111081], \"VariableNames\": [\"CMS_23\"], \"ServiceId\": 12, \"ScoreType\": \"TopBox\", \"BreakoutType\": \"Unit\" },\r\n                   {\"PeerGroupId\": 1729, \"ClientServiceSiteIds\": [111080], \"VariableNames\": [\"PG_23\"], \"ServiceId\": 11, \"ScoreType\": \"Mean\", \"BreakoutType\": \"Site\" }],\r\n  \"QuarterEndDate\": \"2016-06-30T00:00:00-05:00\",\r\n   \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/radial",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"radial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PxDataApi/unitperformancePhone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"ClientId\": 466,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n  \"ClientServiceSiteIds\" : [ 59514 ],\r\n   \"Sites\": [\r\n    { \"CssId\": 59514, \"UnitIds\": [1, 2, 3] }\r\n  ],\r\n  \"QuarterEndDate\": \"2016-03-31T00:00:00-05:00\",\r\n  \"QuarterLookBack\": 8,\r\n  \"ScoreType\": \"Mean\",\r\n  \"VariableName\": \"A1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/unitperformance ",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"unitperformance "
+					]
+				},
+				"description": "http://pe-orc-app1q:8881/api/unitperformance \nhttp://pe-orc-app1q:8881/api/radial \n"
+			},
+			"response": [
+				{
+					"name": "PxDataAPIUnitPerf06-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"ClientId\": 466,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n  \"ClientServiceSiteIds\" : [ 59514 ],\r\n  \"UnitIds\": [1, 2, 3],\r\n  \"QuarterEndDate\": \"2016-03-31T00:00:00-05:00\",\r\n  \"QuarterLookBack\": 8,\r\n  \"ScoreType\": \"Mean\",\r\n  \"VariableName\": \"A1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://pe-orc-app1q:8881/api/unitperformance ",
+							"protocol": "http",
+							"host": [
+								"pe-orc-app1q"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"unitperformance "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "556",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:53:03 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuAIo5/D0Vr6fHMBg7wOZQOxMMGyCkQMoH4ociaJEK2QtEyFuQ7pFyXYJ9XqmZGpekdNQjcReb+GH0LoYdcDQneVodXBUhRw2/BHSsq9uQ5wVeejOmvTCteFGqKTqNVZcfwh855X3dO/dGRiHP+VI=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"unitSet\":[{\"quarter\":{\"startDate\":\"2015-04-01T00:00:00\",\"endDate\":\"2015-06-30T00:00:00\"},\"units\":[{\"unit\":{\"id\":3,\"clientServiceSiteId\":59514},\"surveyCount\":4,\"value\":91.1,\"type\":\"Mean\"},{\"unit\":{\"id\":2,\"clientServiceSiteId\":59514},\"surveyCount\":5,\"value\":87.4,\"type\":\"Mean\"},{\"unit\":{\"id\":1,\"clientServiceSiteId\":59514},\"surveyCount\":3,\"value\":64.8,\"type\":\"Mean\"}]}],\"peerGroupSet\":[{\"quarter\":{\"startDate\":\"2015-04-01T00:00:00\",\"endDate\":\"2015-06-30T00:00:00\"},\"peerGroupScore\":{\"peerGroup\":{\"id\":1728},\"entityCount\":null,\"value\":null,\"type\":\"Mean\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "pxdataserviceuatRequestPhone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": [
+				{
+					"name": "PxdataserviceRequest02-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+						},
+						"url": {
+							"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+							"protocol": "https",
+							"host": [
+								"pxdataserviceuat",
+								"us",
+								"pressganey",
+								"com"
+							],
+							"path": [
+								"api",
+								"scores "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1379",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:54:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuwHSZuDk9EUqf/8O/Ppg089+FuPAl5sIngelW+JFhfnOSN5S4MBH/P0SzRl8GCOHKTIyZuQ17sfl51E11Aoz53yV4/ppStvEQfzzhiUkjMerJGr5dYSHRiBj08ZcDe06A9JU90qhgU948SNCYnRQ=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "[{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":3,\"clientFacilityUnitName\":\"WSU\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":91.1,\"surveyCount\":4,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":2,\"clientFacilityUnitName\":\"MBU14\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":87.4,\"surveyCount\":5,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":1,\"clientFacilityUnitName\":\"MBU12\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":64.8,\"surveyCount\":3,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null}]"
+				}
+			]
+		},
+		{
+			"name": "PxDataApi/unitperformanceMail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"ClientId\": 50000,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n   \"Sites\": [\r\n    { \"CssId\": 111681, \"UnitIds\": [1, 2, 10, 11] }\r\n  ],\r\n  \"QuarterEndDate\": \"2015-12-31T00:00:00-05:00\",\r\n  \"QuarterLookBack\": 1,\r\n  \"VariableName\": \"CMS_23\",\r\n  \"ScoreType\": \"TopBox\",\r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\"\r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/unitperformance ",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"unitperformance "
+					]
+				},
+				"description": "http://pe-orc-app1q:8881/api/unitperformance \nhttp://pe-orc-app1q:8881/api/radial \n"
+			},
+			"response": [
+				{
+					"name": "PxDataAPIUnitPerf06-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"ClientId\": 50000,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n   \"Sites\": [\r\n    { \"CssId\": 111681, \"UnitIds\": [1, 2, 10, 11] }\r\n  ],\r\n  \"QuarterEndDate\": \"2015-12-31T00:00:00-05:00\",\r\n  \"QuarterLookBack\": 1,\r\n  \"VariableName\": \"CMS_23\",\r\n  \"ScoreType\": \"TopBox\",\r\n  \"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\"\r\n}"
+						},
+						"url": {
+							"raw": "http://pe-orc-app1q:8881/api/unitperformance ",
+							"protocol": "http",
+							"host": [
+								"pe-orc-app1q"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"unitperformance "
+							]
+						},
+						"description": "http://pe-orc-app1q:8881/api/unitperformance \nhttp://pe-orc-app1q:8881/api/radial \n"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "556",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:53:03 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuAIo5/D0Vr6fHMBg7wOZQOxMMGyCkQMoH4ociaJEK2QtEyFuQ7pFyXYJ9XqmZGpekdNQjcReb+GH0LoYdcDQneVodXBUhRw2/BHSsq9uQ5wVeejOmvTCteFGqKTqNVZcfwh855X3dO/dGRiHP+VI=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"unitSet\":[{\"quarter\":{\"startDate\":\"2015-04-01T00:00:00\",\"endDate\":\"2015-06-30T00:00:00\"},\"units\":[{\"unit\":{\"id\":3,\"clientServiceSiteId\":59514},\"surveyCount\":4,\"value\":91.1,\"type\":\"Mean\"},{\"unit\":{\"id\":2,\"clientServiceSiteId\":59514},\"surveyCount\":5,\"value\":87.4,\"type\":\"Mean\"},{\"unit\":{\"id\":1,\"clientServiceSiteId\":59514},\"surveyCount\":3,\"value\":64.8,\"type\":\"Mean\"}]}],\"peerGroupSet\":[{\"quarter\":{\"startDate\":\"2015-04-01T00:00:00\",\"endDate\":\"2015-06-30T00:00:00\"},\"peerGroupScore\":{\"peerGroup\":{\"id\":1728},\"entityCount\":null,\"value\":null,\"type\":\"Mean\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "pxdataserviceuatRequestMail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"Periodicity\": 3,\r\n  \"DemographicVariableNames\": [\r\n   \"SITE\",\r\n    \"UNIT\"\r\n  ],\r\n  \"PgQuestionVariableNames\": [],\r\n  \"PgSectionIds\": [],\r\n  \"PgOverall\": false,\r\n  \"CahpsQuestionVariableNames\": [\"CMS_23\"],\r\n  \"CahpsDomainIds\": [],\r\n  \"TopLevelClientId\": 50000,\r\n\"CssIds\": [\r\n    111681\r\n  ],\r\n  \"Metric\": 1,\r\n  \"BeginDate\": \"2015-10-01T00:00:00\",\r\n  \"EndDate\": \"2015-12-31T00:00:00\",\r\n  \"ServiceId\": 12,\r\n  \"Benchmark\": 1,\r\n  \"BenchmarkBreakoutId\": 0,\r\n  \"PeerGroupId\": 1728,\r\n   \"PhoneCalibration\":true,\r\n   \"ESurveyAdjustment\":false\r\n}"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": []
+		},
+		{
+			"name": "pxdataserviceuatRequestMail2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"CorrelationId\" : \"6B29FC40-CA47-1067-B31D-00DD010662DA\",\r\n  \"Periodicity\": 3,\r\n  \"DemographicVariableNames\": [\r\n    \"SITE\"\r\n\r\n  ],\r\n  \"PgQuestionVariableNames\": [],\r\n  \"PgSectionIds\": [],\r\n  \"PgOverall\": false,\r\n  \"CahpsQuestionVariableNames\": [\r\n        \"CG_25CL\", \r\n\"CG_26CL\"\r\n  ],\r\n  \"CahpsDomainIds\": [],\r\n  \"TopLevelClientId\": 50000,\r\n\"CssIds\": [\r\n    111081, 111082, 111083, 111084, 111085, 111086, 111087, 111088, 111089, 111090, 111091, 111416, 111417, 111418, 111419, 111420, 111421, 111564, 111565, 111566, 111567, 111568, 111569, 111681, 111682, 111683, 111684, 111685, 111686, 111687, 111688, 111696, 111697, 111846, 111847, 111848, 111849, 111850, 111851, 111852 \r\n  ],\r\n\"Metric\": 1,\r\n  \"BeginDate\": \"2014-04-01T00:00:00\",\r\n  \"EndDate\": \"2016-03-31T00:00:00\",\r\n  \"ServiceId\": 15,\r\n  \"Benchmark\": 1,\r\n  \"BenchmarkBreakoutId\": 0,\r\n  \"PeerGroupId\": 3469,\r\n    \"PhoneCalibration\": \"true\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": []
+		},
+		{
+			"name": "pxdataserviceuatRequestSite&Unit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": [
+				{
+					"name": "PxdataserviceRequest02-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+						},
+						"url": {
+							"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+							"protocol": "https",
+							"host": [
+								"pxdataserviceuat",
+								"us",
+								"pressganey",
+								"com"
+							],
+							"path": [
+								"api",
+								"scores "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1379",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:54:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuwHSZuDk9EUqf/8O/Ppg089+FuPAl5sIngelW+JFhfnOSN5S4MBH/P0SzRl8GCOHKTIyZuQ17sfl51E11Aoz53yV4/ppStvEQfzzhiUkjMerJGr5dYSHRiBj08ZcDe06A9JU90qhgU948SNCYnRQ=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "[{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":3,\"clientFacilityUnitName\":\"WSU\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":91.1,\"surveyCount\":4,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":2,\"clientFacilityUnitName\":\"MBU14\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":87.4,\"surveyCount\":5,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":1,\"clientFacilityUnitName\":\"MBU12\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":64.8,\"surveyCount\":3,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null}]"
+				}
+			]
+		},
+		{
+			"name": "pxdataserviceuatRequestSite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": [
+				{
+					"name": "PxdataserviceRequest02-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+						},
+						"url": {
+							"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+							"protocol": "https",
+							"host": [
+								"pxdataserviceuat",
+								"us",
+								"pressganey",
+								"com"
+							],
+							"path": [
+								"api",
+								"scores "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1379",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:54:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuwHSZuDk9EUqf/8O/Ppg089+FuPAl5sIngelW+JFhfnOSN5S4MBH/P0SzRl8GCOHKTIyZuQ17sfl51E11Aoz53yV4/ppStvEQfzzhiUkjMerJGr5dYSHRiBj08ZcDe06A9JU90qhgU948SNCYnRQ=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "[{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":3,\"clientFacilityUnitName\":\"WSU\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":91.1,\"surveyCount\":4,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":2,\"clientFacilityUnitName\":\"MBU14\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":87.4,\"surveyCount\":5,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":1,\"clientFacilityUnitName\":\"MBU12\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":64.8,\"surveyCount\":3,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null}]"
+				}
+			]
+		},
+		{
+			"name": "pxdataserviceuatRequestUnit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+				},
+				"url": {
+					"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+					"protocol": "https",
+					"host": [
+						"pxdataserviceuat",
+						"us",
+						"pressganey",
+						"com"
+					],
+					"path": [
+						"api",
+						"scores "
+					]
+				},
+				"description": "https://pxdataserviceuat.us.pressganey.com/api/scores\n"
+			},
+			"response": [
+				{
+					"name": "PxdataserviceRequest02-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+						},
+						"url": {
+							"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+							"protocol": "https",
+							"host": [
+								"pxdataserviceuat",
+								"us",
+								"pressganey",
+								"com"
+							],
+							"path": [
+								"api",
+								"scores "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1379",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:54:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuwHSZuDk9EUqf/8O/Ppg089+FuPAl5sIngelW+JFhfnOSN5S4MBH/P0SzRl8GCOHKTIyZuQ17sfl51E11Aoz53yV4/ppStvEQfzzhiUkjMerJGr5dYSHRiBj08ZcDe06A9JU90qhgU948SNCYnRQ=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "[{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":3,\"clientFacilityUnitName\":\"WSU\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":91.1,\"surveyCount\":4,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":2,\"clientFacilityUnitName\":\"MBU14\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":87.4,\"surveyCount\":5,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":1,\"clientFacilityUnitName\":\"MBU12\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":64.8,\"surveyCount\":3,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null}]"
+				}
+			]
+		},
+		{
+			"name": "PxDataSitePerformanceGOOD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ClientId\": 50000,\r\n  \"ServiceId\": 12,\r\n  \"PeerGroupId\": 1728,\r\n  \"ClientServiceSiteIds\": [ 111081, 3205 ],\r\n  \"QuarterEndDate\": \"2016-06-30\",\r\n  \"QuarterLookBack\": 2,\r\n  \"VariableName\": \"CMS_13\",\r\n  \"ScoreType\": \"TopBox\",\r\n  \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\"\r\n}"
+				},
+				"url": {
+					"raw": "http://pe-orc-app1q:8881/api/SitePerformance",
+					"protocol": "http",
+					"host": [
+						"pe-orc-app1q"
+					],
+					"port": "8881",
+					"path": [
+						"api",
+						"SitePerformance"
+					]
+				},
+				"description": "http://pe-orc-app1q:8881/api/SitePerformance"
+			},
+			"response": [
+				{
+					"name": "PxdataserviceRequest02-21",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"CorrelationId\" : \"6b29fc40-ca47-1067-b31d-00dd010662da\",\r\n \"Periodicity\" : 3,\r\n \"DemographicVariableNames\" : [ \"SITE\", \"UNIT\" ],\r\n \"PgQuestionVariableNames\" : [ \"A1\" ],\r\n \"PgSectionIds\" : [],\r\n \"PgOverall\" : false,\r\n \"CahpsQuestionVariableNames\" : [],\r\n \"CahpsDomainIds\" : [],\r\n \"TopLevelClientId\" : 466,\r\n \"CssIds\" : [ 59514 ],\r\n \"BeginDate\" : \"2014-04-01T00:00:00\",\r\n \"EndDate\" : \"2016-03-31T00:00:00\",\r\n \"ServiceId\" : 12,\r\n \"Metric\" : \"Mean\",\r\n \"Benchmark\" : 1,\r\n \"BenchmarkBreakoutId\" : 0,\r\n \"PeerGroupId\" : 1728,\r\n \"PhoneCalibration\" : true,\r\n \"ESurveyAdjustment\" : true \r\n}"
+						},
+						"url": {
+							"raw": "https://pxdataserviceuat.us.pressganey.com/api/scores ",
+							"protocol": "https",
+							"host": [
+								"pxdataserviceuat",
+								"us",
+								"pressganey",
+								"com"
+							],
+							"path": [
+								"api",
+								"scores "
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1379",
+							"name": "Content-Length",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2016 08:54:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Expires",
+							"value": "-1",
+							"name": "Expires",
+							"description": ""
+						},
+						{
+							"key": "Persistent-Auth",
+							"value": "true",
+							"name": "Persistent-Auth",
+							"description": ""
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/8.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuwHSZuDk9EUqf/8O/Ppg089+FuPAl5sIngelW+JFhfnOSN5S4MBH/P0SzRl8GCOHKTIyZuQ17sfl51E11Aoz53yV4/ppStvEQfzzhiUkjMerJGr5dYSHRiBj08ZcDe06A9JU90qhgU948SNCYnRQ=",
+							"name": "WWW-Authenticate",
+							"description": ""
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "[{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":3,\"clientFacilityUnitName\":\"WSU\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":91.1,\"surveyCount\":4,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":2,\"clientFacilityUnitName\":\"MBU14\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":87.4,\"surveyCount\":5,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null},{\"year\":2015,\"month\":null,\"quarter\":2,\"cssId\":59514,\"clientFacilitySiteName\":\"IN - PAVILION FOR WOMEN\",\"clientFacilityUnitId\":1,\"clientFacilityUnitName\":\"MBU12\",\"surveyItemId\":14,\"surveyItemVariableName\":\"A1\",\"surveyItemReportName\":\"Speed of admission\",\"surveySectionId\":null,\"surveySectionName\":null,\"score\":64.8,\"surveyCount\":3,\"benchmarkPeriod\":null,\"benchmarkPeriodBegin\":null,\"benchmarkPeriodEnd\":null,\"rank\":null,\"peerGroupN\":null,\"peerGroupScore\":null}]"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
